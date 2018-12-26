@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import styled from 'styled-components'
 import Moment from 'react-moment'
 import 'moment/locale/ru'
@@ -58,7 +58,7 @@ const Time = styled(Moment)`
   }
 `
 
-const Title = styled.a`
+const TitleLink = styled(Link)`
   font-size: 21px;
   color: #2c3949;
   font-weight: 700;
@@ -95,7 +95,7 @@ const MainPage = ({ data }) => {
                 <Time format="D MMM YYYY" withTitle locale="ru">
                   {frontmatter.date}
                 </Time>
-                <Title href={frontmatter.path}>{frontmatter.title}</Title>
+                <TitleLink to={frontmatter.path}>{frontmatter.title}</TitleLink>
               </PostTitle>
             </Post>
           </Posts>
