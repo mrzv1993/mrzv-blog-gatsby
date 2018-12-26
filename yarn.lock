@@ -1238,13 +1238,6 @@ apollo-utilities@^1.0.0, apollo-utilities@^1.0.1:
   dependencies:
     fast-json-stable-stringify "^2.0.0"
 
-applause-button@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/applause-button/-/applause-button-3.0.0.tgz#f2e7e292d404f6eac5c62353985bf89496702c10"
-  integrity sha512-E4ENyq6+erbxGWcLIKm/qggD7onIYqUL4bFCxCGvdm3adRD9b9IHJXNILBMrGW5CJBuLTT0nzI7/qdPidsr88g==
-  dependencies:
-    document-register-element "^1.8.1"
-
 aproba@^1.0.3, aproba@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/aproba/-/aproba-1.2.0.tgz#6802e6264efd18c790a1b0d517f0f2627bf2c94a"
@@ -3812,13 +3805,6 @@ doctrine@^2.1.0:
   integrity sha512-35mSku4ZXK0vfCuHEDAwt55dg2jNajHZ1odvF+8SSr82EsZY4QmXfuWso8oEd8zRhVObSN18aM0CjSdoBX7zIw==
   dependencies:
     esutils "^2.0.2"
-
-document-register-element@^1.8.1:
-  version "1.13.1"
-  resolved "https://registry.yarnpkg.com/document-register-element/-/document-register-element-1.13.1.tgz#dad8cb7be38e04ee3f56842e6cf81af46c1249ba"
-  integrity sha512-92ZyLDKg9j4rOll//NNXj25f+8rAzOkYsGJonhugKwXfeqH7bzs8Ucpvey0WzZ2ZzKdrvW9RnUw3UyOZ/uhBFw==
-  dependencies:
-    lightercollective "^0.1.0"
 
 dom-converter@~0.2:
   version "0.2.0"
@@ -7149,11 +7135,6 @@ levn@^0.3.0, levn@~0.3.0:
   dependencies:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
-
-lightercollective@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/lightercollective/-/lightercollective-0.1.0.tgz#70df102c530dcb8d0ccabfe6175a8d00d5f61300"
-  integrity sha512-J9tg5uraYoQKaWbmrzDDexbG6hHnMcWS1qLYgJSWE+mpA3U5OCSeMUhb+K55otgZJ34oFdR0ECvdIb3xuO5JOQ==
 
 load-bmfont@^1.2.3:
   version "1.4.0"
