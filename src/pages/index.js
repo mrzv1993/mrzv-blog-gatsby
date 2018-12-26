@@ -3,7 +3,6 @@ import { graphql, Link } from 'gatsby'
 import styled from 'styled-components'
 import Moment from 'react-moment'
 import 'moment/locale/ru'
-import Helmet from 'react-helmet'
 
 import Layout from '../templates/layout'
 import Hero from '../components/Hero'
@@ -77,19 +76,7 @@ const MainPage = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
   return (
     <Layout>
-      <Helmet>
-        <link
-          rel="stylesheet"
-          href="https://unpkg.com/applause-button/dist/applause-button.css"
-        />
-        <script src="https://unpkg.com/applause-button/dist/applause-button.js" />
-      </Helmet>
       <Hero />
-      <applause-button
-        style={{ width: '58px', height: '58px', display: 'block' }}
-        multiclap="true"
-        color="#4a4fd9"
-      />
       <BlogTitle />
       {posts.map(({ node: post }, index) => {
         const { frontmatter } = post
