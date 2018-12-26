@@ -12,6 +12,7 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "dependencies": {
+    "applause-button": "^3.0.0",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.0.76",
     "gatsby-plugin-google-fonts": "^0.0.4",
