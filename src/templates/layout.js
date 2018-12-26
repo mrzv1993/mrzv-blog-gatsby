@@ -6,7 +6,7 @@ import 'reset-css'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
-const Page = styled.main`
+const Page = styled.div`
   display: flex;
   flex-flow: column;
   align-items: flex-start;

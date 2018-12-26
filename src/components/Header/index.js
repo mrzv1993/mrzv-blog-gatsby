@@ -3,12 +3,12 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import logo from './logo.png'
 
-const HeaderWrap = styled.div`
+const HeaderWrap = styled.header`
   width: 100%;
   border-bottom: 1px solid #eeeff0;
 `
 
-const Header = styled.header`
+const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;

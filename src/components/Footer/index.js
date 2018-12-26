@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const FooterWrap = styled.header`
+const FooterWrap = styled.footer`
   width: 100%;
   border-top: 1px solid #eeeff0;
   margin: auto auto 0 auto;
