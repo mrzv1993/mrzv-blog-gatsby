@@ -21,18 +21,22 @@ const Post = styled.a`
 const ImageScale = styled.div`
   width: 288px;
   height: 152px;
-  border-radius: 4px;
   overflow: hidden;
 `
 
 const Image = styled.img`
   width: 288px;
   height: 152px;
-  transition: transform 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.32s;
 
   ${Post}:hover & {
     transform: scale(1.08, 1.08);
   }
+`
+
+const PostTitle = styled.div`
+  display: flex;
+  flex-flow: column;
 `
 
 const Time = styled(Moment)`
@@ -48,7 +52,7 @@ const Time = styled(Moment)`
   }
 `
 
-const PostTitle = styled.a`
+const Title = styled.a`
   font-size: 21px;
   color: #2c3949;
   font-weight: 700;
@@ -78,10 +82,12 @@ const MainPage = ({ data }) => {
                 alt="lorem"
               />
             </ImageScale>
-            <Time format="D MMM YYYY" withTitle locale="ru">
-              {frontmatter.date}
-            </Time>
-            <PostTitle href={frontmatter.path}>{frontmatter.title}</PostTitle>
+            <PostTitle>
+              <Time format="D MMM YYYY" withTitle locale="ru">
+                {frontmatter.date}
+              </Time>
+              <Title href={frontmatter.path}>{frontmatter.title}</Title>
+            </PostTitle>
           </Post>
         )
       })}

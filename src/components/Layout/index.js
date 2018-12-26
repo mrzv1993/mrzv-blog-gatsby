@@ -4,19 +4,31 @@ import styled from 'styled-components'
 import 'reset-css'
 
 import Header from '../Header'
+import Footer from '../Footer'
+
+const Page = styled.main`
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  min-width: 320px;
+  min-height: 100vh;
+`
 
 const Wrapper = styled.main`
+  width: 100%;
   max-width: 960px;
+  min-width: 320px;
   margin: 0 auto;
   padding: 0 16px;
 `
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <Page>
       <Header />
       <Wrapper>{children}</Wrapper>
-    </div>
+      <Footer />
+    </Page>
   )
 }
 
