@@ -64,14 +64,14 @@ const Template = ({ data }) => {
         {date}
       </Time>
       <Title>{title}</Title>
-      <BlogPost dangerouslySetInnerHTML={{ __html: html }} />
       <Clap>
         <applause-button
-          style={{ width: '58px', height: '58px', display: 'block' }}
+          style={{ width: '120px', height: '120px' }}
+          url="https://mrzv1993.ru/first-post"
           multiclap="true"
-          color="#4a4fd9"
         />
       </Clap>
+      <BlogPost dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )
 }
