@@ -5,6 +5,12 @@ import Moment from 'react-moment'
 import 'moment/locale/ru'
 
 import Layout from '../components/Layout'
+import Hero from '../components/Hero'
+import BlogTitle from '../components/BlogTitle'
+
+const Posts = styled.div`
+  margin-top: 32px;
+`
 
 const Post = styled.a`
   width: 288px;
@@ -70,25 +76,29 @@ const MainPage = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
   return (
     <Layout>
+      <Hero />
+      <BlogTitle />
       {posts.map(({ node: post }, index) => {
         const { frontmatter } = post
         return (
-          <Post key={frontmatter.path} href={frontmatter.path}>
-            <ImageScale>
-              <Image
-                src={`${frontmatter.image}`}
-                width="189"
-                height="255"
-                alt="lorem"
-              />
-            </ImageScale>
-            <PostTitle>
-              <Time format="D MMM YYYY" withTitle locale="ru">
-                {frontmatter.date}
-              </Time>
-              <Title href={frontmatter.path}>{frontmatter.title}</Title>
-            </PostTitle>
-          </Post>
+          <Posts>
+            <Post key={frontmatter.path} href={frontmatter.path}>
+              <ImageScale>
+                <Image
+                  src={`${frontmatter.image}`}
+                  width="189"
+                  height="255"
+                  alt="lorem"
+                />
+              </ImageScale>
+              <PostTitle>
+                <Time format="D MMM YYYY" withTitle locale="ru">
+                  {frontmatter.date}
+                </Time>
+                <Title href={frontmatter.path}>{frontmatter.title}</Title>
+              </PostTitle>
+            </Post>
+          </Posts>
         )
       })}
     </Layout>
