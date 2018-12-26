@@ -18,6 +18,7 @@ export default function() {
         style={{ width: '58px', height: '58px', display: 'block' }}
         multiclap="true"
         color="#4a4fd9"
+        url="https://mrzv1993.ru/first-post"
       >
         {' '}
       </applause-button>
