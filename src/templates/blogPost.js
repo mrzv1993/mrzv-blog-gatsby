@@ -70,7 +70,7 @@ const Template = ({ data }) => {
           style={{ width: '120px', height: '120px' }}
           url="https://mrzv1993.ru/first-post"
           multiclap="true"
-        />
+        ></applause-button>
       </Clap>
       <BlogPost dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
