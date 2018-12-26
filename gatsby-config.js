@@ -5,6 +5,8 @@ module.exports = {
   },
   plugins: [
     `gatsby-transformer-remark`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-force-trailing-slashes`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,

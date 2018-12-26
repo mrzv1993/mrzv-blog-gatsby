@@ -1,8 +1,9 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+
+import Layout from './layout'
 
 const Template = props => {
-  return <div>Blog post here</div>
+  return <Layout>Blog post here</Layout>
 }
 
 export default Template

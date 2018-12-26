@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import 'reset-css'
 
-import Header from '../Header'
-import Footer from '../Footer'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 const Page = styled.main`
   display: flex;

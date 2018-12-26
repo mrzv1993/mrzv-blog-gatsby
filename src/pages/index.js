@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Moment from 'react-moment'
 import 'moment/locale/ru'
 
-import Layout from '../components/Layout'
+import Layout from '../templates/layout'
 import Hero from '../components/Hero'
 import BlogTitle from '../components/BlogTitle'
 

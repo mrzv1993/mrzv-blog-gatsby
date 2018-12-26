@@ -3,6 +3,7 @@ path: '/first-post'
 date: '2018-12-26'
 title: 'Новый пост'
 tags: ['design', 'code', 'blog']
+author: 'Станислав Морозов'
 description: 'Как сайд–проекты делалают твой скилл лучше'
 summary: 'Водители должны понять, лояльность клиентов — хлеб'
 image: 'https://ucarecdn.com/432e38e1-4414-45f3-b6cd-95ebc3adb97a/startmyblog2x.jpg'
