@@ -13,5 +13,14 @@ module.exports = {
         path: `${__dirname}/src/posts`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `source sans pro\:300,400,400i,700,900`,
+          `fira mono\:400,500,700`,
+        ],
+      },
+    },
   ],
 }
