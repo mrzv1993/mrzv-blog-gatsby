@@ -66,6 +66,7 @@ const Template = ({ data }) => {
       <Title>{title}</Title>
       <Clap>
         <applause-button
+          class="style-root"
           style={{ width: '120px', height: '120px' }}
           url="https://mrzv1993.ru/first-post"
           multiclap="true"
