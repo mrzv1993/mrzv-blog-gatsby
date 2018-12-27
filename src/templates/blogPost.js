@@ -74,6 +74,10 @@ const Image = styled.img`
 
 const BlogPost = styled.div`
   margin-top: 32px;
+  font-family: 'Fira Mono', monospace;
+  font-size: 17px;
+  line-height: 29px;
+  color: #2c3949;
   h2,
   h3,
   h4,
@@ -82,10 +86,6 @@ const BlogPost = styled.div`
   p {
     max-width: 680px;
     margin: 0 auto;
-    font-family: 'Fira Mono', monospace;
-    font-size: 17px;
-    line-height: 29px;
-    color: #2c3949;
   }
 
   h4 {
@@ -98,6 +98,7 @@ const BlogPost = styled.div`
     margin: 0 auto;
     width: 64px;
     height: 64px;
+    cursor: pointer;
   }
 
   applause-button .count {
