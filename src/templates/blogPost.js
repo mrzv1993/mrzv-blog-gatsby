@@ -4,6 +4,7 @@ import Layout from './layout'
 import styled from 'styled-components'
 import Moment from 'react-moment'
 import 'moment/locale/ru'
+import Helmet from 'react-helmet'
 
 const Time = styled(Moment)`
   font-family: 'Fira Mono', monospace;
@@ -46,6 +47,13 @@ const Template = ({ data }) => {
   const html = markdownRemark.html
   return (
     <Layout>
+      <Helmet>
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/applause-button/dist/applause-button.css"
+        />
+        <script src="https://unpkg.com/applause-button/dist/applause-button.js" />
+      </Helmet>
       <Time format="D MMM YYYY" withTitle locale="ru">
         {date}
       </Time>
