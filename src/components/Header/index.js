@@ -39,7 +39,7 @@ const Nav = styled.nav`
 
 const SocialLink = styled.a`
   display: inline-block;
-  margin-left: 12px;
+  margin-left: 16px;
   color: #6c7480;
   text-decoration: none;
 

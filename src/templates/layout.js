@@ -10,15 +10,16 @@ const Page = styled.div`
   display: flex;
   flex-flow: column;
   align-items: flex-start;
+  width: 100%;
   min-width: 320px;
   min-height: 100vh;
+  padding: 0 -16px;
 `
 
 const Wrapper = styled.main`
-  width: 100%;
-  max-width: 960px;
-  min-width: 320px;
   margin: 0 auto;
+  max-width: 960px;
+  width: calc(100% - 32px);
   padding: 0 16px;
 `
 
