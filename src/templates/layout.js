@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import 'reset-css'
+import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -25,6 +26,15 @@ const Wrapper = styled.main`
 const Layout = ({ children }) => {
   return (
     <Page>
+      <Helmet>
+        {' '}
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/applause-button/dist/applause-button.css"
+        />
+        <script src="https://unpkg.com/applause-button/dist/applause-button.js" />
+      </Helmet>
+
       <Header />
       <Wrapper>{children}</Wrapper>
       <Footer />

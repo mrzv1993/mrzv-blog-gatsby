@@ -4,7 +4,6 @@ import Layout from './layout'
 import styled from 'styled-components'
 import Moment from 'react-moment'
 import 'moment/locale/ru'
-import Helmet from 'react-helmet'
 
 const Time = styled(Moment)`
   font-family: 'Fira Mono', monospace;
@@ -39,12 +38,6 @@ const BlogPost = styled.div`
     color: #354356;
   }
 `
-const Clap = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 48px 0;
-`
 
 const Template = ({ data }) => {
   const { markdownRemark } = data
@@ -53,25 +46,10 @@ const Template = ({ data }) => {
   const html = markdownRemark.html
   return (
     <Layout>
-      <Helmet>
-        <link
-          rel="stylesheet"
-          href="https://unpkg.com/applause-button/dist/applause-button.css"
-        />
-        <script src="https://unpkg.com/applause-button/dist/applause-button.js" />
-      </Helmet>
       <Time format="D MMM YYYY" withTitle locale="ru">
         {date}
       </Time>
       <Title>{title}</Title>
-      <Clap>
-        <applause-button
-          class="style-root"
-          style={{ width: '120px', height: '120px' }}
-          url="https://mrzv1993.ru/first-post"
-          multiclap="true"
-        ></applause-button>
-      </Clap>
       <BlogPost dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )
