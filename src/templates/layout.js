@@ -14,6 +14,8 @@ const Page = styled.div`
   min-width: 320px;
   min-height: 100vh;
   padding: 0 -16px;
+  font-size: 16px;
+  transition: all 0.32s;
 `
 
 const Wrapper = styled.main`

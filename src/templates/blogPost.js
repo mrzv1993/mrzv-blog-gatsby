@@ -6,6 +6,65 @@ import Moment from 'react-moment'
 import 'moment/locale/ru'
 import Helmet from 'react-helmet'
 
+import * as color from '../style/color'
+import * as font from '../style/font'
+
+const Article = styled.div`
+  margin-top: 32px;
+  font-family: 'Fira Mono', monospace;
+  font-size: 1rem;
+  line-height: 29px;
+  color: ${color.primary};
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    ${font.fontH2}
+  }
+
+  h3 {
+    ${font.fontH3}
+  }
+
+  h4 {
+    ${font.fontH4}
+  }
+
+  h5 {
+    ${font.fontH5}
+  }
+
+  h6 {
+    ${font.fontH6}
+  }
+
+  p {
+    ${font.fontParagraph}
+  }
+
+  applause-button {
+    margin: 0 auto;
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+  }
+
+  applause-button .count {
+    font-size: 18px;
+    font-family: 'Fira Mono', monospace;
+    top: -24px;
+  }
+`
+
 const Hero = styled.div`
   max-width: 680px;
   margin: 0 auto;
@@ -14,19 +73,13 @@ const Hero = styled.div`
 const Tags = styled.div``
 
 const Title = styled.h1`
-  font-size: 44px;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 700;
-  margin: 0 auto;
-  margin-top: 32px;
-  color: #2c3949;
-  line-height: 48px;
-  max-width: 680px;
+  ${font.fontH1};
+  color: ${color.primary};
 `
+
 const DataAndShare = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 24px 0;
   font-family: 'Fira Mono', monospace;
   font-size: 14px;
   font-weight: 400;
@@ -70,42 +123,6 @@ const SharedTwitter = styled(SharedLink)`
 const Image = styled.img`
   width: 100%;
   height: auto;
-`
-
-const BlogPost = styled.div`
-  margin-top: 32px;
-  font-family: 'Fira Mono', monospace;
-  font-size: 17px;
-  line-height: 29px;
-  color: #2c3949;
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    max-width: 680px;
-    margin: 0 auto;
-  }
-
-  h4 {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 40px;
-  }
-
-  applause-button {
-    margin: 0 auto;
-    width: 64px;
-    height: 64px;
-    cursor: pointer;
-  }
-
-  applause-button .count {
-    font-size: 18px;
-    font-family: 'Fira Mono', monospace;
-    top: -24px;
-  }
 `
 
 const Template = ({ data }) => {
@@ -159,7 +176,7 @@ const Template = ({ data }) => {
         </DataAndShare>
       </Hero>
       <Image src={image} />
-      <BlogPost dangerouslySetInnerHTML={{ __html: html }} />
+      <Article dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )
 }
