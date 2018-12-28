@@ -10,6 +10,14 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {
+      resolve: `gatsby-plugin-yandex-metrika`,
+      options: {
+        trackingId: '51757196',
+        webvisor: true,
+        trackHash: true,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
