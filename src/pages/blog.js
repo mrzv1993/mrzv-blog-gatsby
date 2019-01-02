@@ -5,8 +5,6 @@ import Moment from 'react-moment'
 import 'moment/locale/ru'
 
 import Layout from '../templates/layout'
-import Hero from '../components/Hero'
-import BlogTitle from '../components/BlogTitle'
 
 const Posts = styled.div`
   margin-top: 32px;
@@ -15,12 +13,15 @@ const Posts = styled.div`
 `
 
 const Post = styled.a`
-  width: 32%;
+  width: 288px;
   display: flex;
-  flex-flow: wrap;
+  flex-flow: column;
   align-items: baseline;
   text-decoration: none;
-  margin-right: 8px;
+
+  @media (min-width: 640px) {
+    flex-flow: wrap;
+  }
 `
 
 const ImageScale = styled.div`
@@ -71,12 +72,10 @@ const TitleLink = styled(Link)`
   }
 `
 
-const MainPage = ({ data }) => {
+const Blog = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
   return (
     <Layout>
-      <Hero />
-      <BlogTitle />
       <Posts>
         {posts.map(({ node: post }, index) => {
           const { frontmatter } = post
@@ -107,7 +106,7 @@ const MainPage = ({ data }) => {
 }
 
 export const query = graphql`
-  query HomepageQuery {
+  query BlogQuery {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
@@ -127,4 +126,4 @@ export const query = graphql`
   }
 `
 
-export default MainPage
+export default Blog

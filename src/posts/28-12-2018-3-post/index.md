@@ -1,5 +1,5 @@
 ---
-path: 'first-post'
+path: '3-draft'
 date: '2018-12-26'
 title: 'Запуск блога. Без мам, пап и кредитов'
 tags: ['gatsby', 'blog']
